@@ -19,4 +19,4 @@ kaggleSubmission.data %>%
   cbind(kaggleSubmission.model1) %>%
   rename(., 'Transported' = '.pred_class') %>%
   select('PassengerId', 'Transported') %>% # format for Kaggle submission
-  write.csv(., "submissions/Kaggle Submission - log reg model 1.csv", row.names = FALSE)
+  write.csv(., "submissions/Kaggle Submission - model 1 - log reg.csv", row.names = FALSE)

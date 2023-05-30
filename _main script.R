@@ -102,6 +102,20 @@ rm(x, y, randForest.model1, randForest.model1.predictions, randForest.model1.res
 # scored 79.214% accuracy on Kaggle leaderboard - best model yet, but still not ideal
 
 
+# random forest performed well, but difficult to interpret and visualise.
+# next test out a decision tree to determine accuracy vs interpretability.
+
+
+# decision tree (original data) ----------------------------------------------------------
+
+# fit decision tree to the data
+source("model 4 - dec tree.r")
+
+# apply model 4 predictions to kaggle competition test submission data
+source("kaggle submission 4 - model 4 - dec tree.r")
+
+rm(x, y, decTree.model1, decTree.model1.predictions, decTree.model1.results,
+   kaggleSubmission.data, kaggleSubmission.model4)
 
 
 

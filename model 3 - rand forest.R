@@ -22,21 +22,21 @@ rand_forest(mode = "classification", trees = 2000) %>%
 
 # Interpret Model ------------------------------------------------------------------------
 
-# examine variable importance
-randomForest::varImpPlot(randForest.model1$fit)
-
-# then examine rough direction of each variable?
-plot(train.data$Transported, train.data$Spa)
-
-# spa was most important var
-ggplot(train.data, aes(x = Transported, y = Spa)) +
-  geom_violin(aes(fill = Transported)) +
-  theme_minimal()
-
-# examine Cryosleep
-ggplot(train.data, aes(x = Transported, fill = CryoSleep)) +
-  geom_bar()
-
+# # examine variable importance
+# randomForest::varImpPlot(randForest.model1$fit)
+# 
+# # then examine rough direction of each variable?
+# plot(train.data$Transported, train.data$Spa)
+# 
+# # spa was most important var
+# ggplot(train.data, aes(x = Transported, y = Spa)) +
+#   geom_violin(aes(fill = Transported)) +
+#   theme_minimal()
+# 
+# # examine Cryosleep
+# ggplot(train.data, aes(x = Transported, fill = CryoSleep)) +
+#   geom_bar()
+# 
 
 # Build Evaluation Output ----------------------------------------------------------------
 
