@@ -45,10 +45,10 @@ test.data %<>%
 # Model 1 fitting and diagnostics --------------------------------------------------------
 
 # log reg model on cleaned data
-source("Model 1 - OG Log Reg.r", verbose = TRUE)
+source("model 1 - log reg.r")
 
 # apply model 1 predictions to kaggle competition test submission data
-source("kaggle submission 1 - log reg model 1.r")
+source("kaggle submission 1 - model 1 - log reg.r")
 
 # remove all info relating to model 1
 rm(x, y, logreg.model1, logreg.model1.predictions, logreg.model1.results,
@@ -60,7 +60,7 @@ rm(x, y, logreg.model1, logreg.model1.predictions, logreg.model1.results,
 # Feature Engineering --------------------------------------------------------------------
 
 # separate passenger ID and Cabin ID - function from Feature Engineering file
-source("Feature Engineering.r")
+source("feature engineering.r")
 
 # apply separation function to train and test data
 train.data %<>%
@@ -75,10 +75,10 @@ test.data %<>%
 # Model 2 fitting and diagnostics --------------------------------------------------------
 
 # log reg model on cleaned and engineered data
-source("Model 2 - Engineered Log Reg.r")
+source("model 2 - log reg.r")
 
 # apply model 2 predictions to kaggle competition test submission data
-source("kaggle submission 2 - log reg model 2.r")
+source("kaggle submission 2 - model 2 - log reg.r")
 
 rm(x, y, logreg.model2, logreg.model2.predictions, logreg.model2.results,
    kaggleSubmission.data, kaggleSubmission.model2)
@@ -91,10 +91,10 @@ rm(x, y, logreg.model2, logreg.model2.predictions, logreg.model2.results,
 # random forest (original data) ----------------------------------------------------------
 
 # fit random forest to the data
-source("Model 3 - OG Rand Forest.r")
+source("model 3 - rand forest.r")
 
 # apply model 3 predictions to kaggle competition test submission data
-source("kaggle submission 3 - rand forest model 3.r")
+source("kaggle submission 3 - model 3 - rand forest.r")
 
 rm(x, y, randForest.model1, randForest.model1.predictions, randForest.model1.results,
    kaggleSubmission.data, kaggleSubmission.model3)
